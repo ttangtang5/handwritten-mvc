@@ -1,0 +1,148 @@
+body,label,head,dd,dir,dl,fieldset,figure,form,h1,h2,h3,h4,h5,h6,hr,
+input,legend,menu,ol,optgroup,p,pre,tbody,td,textarea,tfoot,th,thead,ul {
+    margin:0;
+    padding:0;
+}
+body {
+    text-align:center;
+    background-color: #FFFFFF;
+}
+.login_head {
+    height:760px;
+    width:1280px;
+    margin: 0px auto;
+}
+.login_welcome {
+    width: 300PX;
+    height: 28px;
+    position: absolute;
+    top: 100px;
+    left: 720px;
+    font-family: arial reular;
+    font-size: 24px;
+    color: #2E4358;
+    TEXT-ALIGN: left;
+}
+.login_company_logo {
+    background-repeat: no-repeat;
+    height: 90px;
+    width: 180px;
+    /*background-image: url("images/LOGO_Web_Login_90x180.png");*/
+    position: absolute;
+    top: 323px;
+    left: 170px;
+}
+.login_OnlineExamWebSystem {
+    height: 20px;
+    width: 380px;
+    position: relative;
+    margin-left: 0px;
+    margin-top: 121px;
+    text-align: left;
+    font-family: Arial Bold;
+    font-size: 30px;
+    color: #2E4358;
+}
+
+.login_form {
+    position: absolute;
+    width: 400px;
+    height: 320px;
+    top: 150px;
+    left: 720px;
+    background-color: #2E4358;
+}
+.login_form_username {
+    border-radius: 3px;
+    width: 265px;
+    height: 35px;
+    position: relative;
+    margin-left: 50px;
+    margin-top: 21px;
+    background-color: #FFFFFF;
+}
+
+.login_form_password {
+    position: relative;
+    border-radius: 3px;
+    padding-left: 35px;
+    margin-left: 50px;
+    margin-top: 20px;
+    width: 230px;
+    height: 35px;
+    background-color: #FFFFFF;
+}
+.login_form_username_ico {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 9px;
+    top: 6px;
+    background-image: url("images/ICN_Usename_20x20.png");
+    background-repeat: no-repeat;
+}
+.login_form_password_ico {
+    position: absolute;
+    top: 6px;
+    left: 10px;
+    background-image: url("images/ICN_Password_20x15.png");
+    background-repeat: no-repeat;
+    background-position: 1% 50%;
+    width: 15px;
+    height: 20px;
+}
+.userName {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 228px;
+    line-height: 31px;
+    padding-left: 33px;
+}
+.password{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 228px;
+    line-height: 31px;
+    padding-left: 33px;
+}
+.login_image {
+    margin-top: 20px;
+    width: 290px;
+    height: 35px;
+    margin-left: 38px;
+}
+.login_remeber_me {
+    position: relative;
+    margin-top: 20px;
+    margin-left: -30px;
+    color:#FFFFFF;
+}
+.login_forgot_password {
+
+}
+.login_errorMsg_span {
+    font-family: Arial Reular;
+    font-size: 12px;
+    color:#F00;
+    padding-left: 11px;
+}
+.login_errorMsg {
+    height: 20px;
+    width: 263px;
+    position: relative;
+    margin-top: 34px;
+    background-color: #FCCB9B;
+    margin-left: 51px;
+    text-align: left;
+    border: solid 1px #FFF;
+}
+.checkErrorMsgIsNull {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    color: red;
+    left: 275px;
+    top: 5px;
+}

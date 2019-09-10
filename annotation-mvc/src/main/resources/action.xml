@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<action path="/user/login" id="userController" class="com.tang.controller.UserController" method="login"/>

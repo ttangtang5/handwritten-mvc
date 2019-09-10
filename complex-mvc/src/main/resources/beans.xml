@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans>
+  <bean id="questionDao" class="com.tang.dao.impl.QuestionDaoImpl" scope="singleton" />
+
+  <bean id="userDao" class="com.tang.dao.impl.UserDaoImpl" scope="singleton" />
+  
+  <bean id="questionService" class="com.tang.service.impl.QuestionServiceImpl" scope="singleton" >
+    <property name="questionDao" ref="questionDao" />
+  </bean>
+
+  <bean id="userService" class="com.tang.service.impl.UserServiceImpl" scope="singleton">
+    <property name="userDao" ref="userDao"/>
+  </bean>
+ 
+  <bean id="userController" class="com.tang.controller.UserController" scope="singleton">
+    <property name="userService" ref="userService"/>
+  </bean>
+
+  <bean id="questionController" class="com.tang.controller.QuestionController" scope="singleton">
+    <property name="questionService" ref="questionService"/>
+  </bean>
+
+</beans>
+

@@ -1,0 +1,146 @@
+body,label,head,dd,dir,dl,fieldset,figure,form,h1,h2,h3,h4,h5,h6,hr,
+input,legend,menu,ol,optgroup,p,pre,tbody,td,textarea,tfoot,th,thead,ul {
+    margin:0;
+    padding:0;
+}
+img {
+    margin-left: 30px;
+    cursor: pointer;
+}
+body {
+    height:100%;
+    text-align:center;
+    background-color: #FFFFFF;
+}
+.navigation {
+position: relative;
+    font-family: Arial Regular;
+    font-size: 12px;
+    text-align: left;
+    height: 22px;
+    line-height: 22px;
+    padding-left: 21px;
+}
+.contentAdmin_createquestion_foot_content {
+    height: 480px;
+    background-color: #FFF;
+    position: relative;
+    margin-top: 6px;
+    margin-left: 20px;
+    margin-right: 20px;
+    overflow: hidden;
+    border-radius: 3px;
+}
+.question_id {
+    position: relative;
+    width: 550px;
+    height: 30px;
+    margin-top: 30px;
+    margin-left: 365px;
+    text-align: left;
+}
+.question_id input {
+    height: 26px;
+    width: 150px;
+    position: relative;
+    left: 54px;
+    border-radius: 3px;
+    color: #2E4358;
+}
+.question textarea {
+    height: 116px;
+    width: 400px;
+    border-radius: 1px;
+    margin-left: 83px;
+    position: absolute;
+}
+
+.question {
+    width: 551px;
+    height: 120px;
+    margin-top: 22px;
+    margin-left: 365px;
+    text-align: left;
+}
+
+.question label {
+    line-height: 121px;
+}
+.question span {
+    position: absolute;
+    top: 128px;
+    right: 358px;
+}
+
+.answer {
+    width: 550px;
+    height: 140px;
+    position: relative;
+    left: 365px;
+    top: 20px;
+}
+.answer div {
+    top: -5px;
+    position: relative;
+    margin-top: 15px;
+}
+.answer .Answer {
+    position: absolute;
+    left: 2px;
+    top: 53px;
+}
+.answer #text {
+    height: 20px;
+    width: 341px;
+    position: absolute;
+    margin-left: 19px;
+    top: -5px;
+    border-radius: 1px;
+}
+.answer #radio {
+    position: absolute;
+    left: 144px;
+}
+.answer .option {
+    position: relative;
+    margin-left: -200px;
+    top: -3px;
+}
+.manager {
+    position: relative;
+    top: 50px;
+    left: 7px;
+}
+.contentAdmin_createquestion_foot_content label {
+    font-family: Arial Regular;
+    font-size: 14px;
+    color: #0A0A0A;
+}
+.question_id span {
+    position: absolute;
+    left: 289px;
+    top: 5px;
+    font-family: Arial Regular;
+    font-size: 10px;
+    color: red;
+}
+.answer div span {
+    position: absolute;
+    right: -37px;
+    top: -3px;
+    font-family: Arial Regular;
+    font-size: 10px;
+    color: red;
+}
+#createQuestionMsg {
+    width: 18%;
+    height: 69px;
+    position: absolute;
+    left: 600px;
+    background-color: #FFDAC8;
+    border-radius: 5px;
+    line-height: 69px;
+    font-family: cursive;
+    font-size: 14px;
+    color: blueviolet;
+}

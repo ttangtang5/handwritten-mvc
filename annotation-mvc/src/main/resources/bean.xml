@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<beans>
+    <beanConfig id="userService" class="com.tang.service.impl.UserServiceImpl" singleton="false">
+        <property name="test" value="testValue"/>
+    </beanConfig>
+    <beanConfig id="userService2" class="com.tang.service.impl.UserServiceImpl" singleton="false"/>
+    <beanConfig id="userService3" class="com.tang.service.impl.UserServiceImpl" singleton="false"/>
+    <beanConfig id="userService4" class="com.tang.service.impl.UserServiceImpl" singleton="true"/>
+    <beanConfig id="userService5" class="com.tang.service.impl.UserServiceImpl" singleton="true"/>
+    <beanConfig id="userService6" class="com.tang.service.impl.UserServiceImpl" singleton="true"/>
+</beans>

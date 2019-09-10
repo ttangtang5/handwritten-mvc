@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<controller>
+
+    <action name="createQuestion" class="questionController" method="createQuestion" httpMethod="POST">
+        <result name="error" view="/WEB-INF/jsp/create_question.jsp" redirect="false"/>
+        <result name="success" view="/WEB-INF/jsp/content_admin.jsp" redirect="false"
+                viewParameter="questionList:attribute,pagination:session"/>
+    </action>
+
+    <action name="contentAdmin" class="questionController" method="showQuestion">
+        <result name="createQuestion" view="/WEB-INF/jsp/create_question.jsp" viewParameter="action:parameter"/>
+    </action>
+
+    <action name="showContenAdmin" class="questionController" method="showQuestion" httpMethod="POST"/>
+
+    <action name="question" class="questionController" method="showQuestion">
+        <result name="createQuestionPage" view="/WEB-INF/jsp/create_question.jsp" viewParameter="action:parameter"/>
+        <result name="contentAdmin" view="/WEB-INF/jsp/content_admin.jsp"/>
+    </action>
+
+    <action name="deleteQuestion" class="questionController" method="deleteQuestion" httpMethod="POST">
+        <result name="success" view="/WEB-INF/jsp/content_admin.jsp"/>
+    </action>
+
+    <action name="lazySearch" class="questionController" method="findQuestionListByDescription">
+        <result name="show" view="/WEB-INF/jsp/content_admin.jsp"/>
+    </action>
+
+    <action name="updateQuestion" class="questionController" method="updateQuestion" httpMethod="POST">
+        <result name="success" view="showContenAdmin.action" redirect="false"/>
+        <result name="error" view="updateQuestion.action" redirect="false"/>
+    </action>
+
+    <action name="returnUpdateQuestion" class="questionController" method="updateQuestion">
+        <result name="success" view="showContenAdmin.action" redirect="false"/>
+        <result name="error" view="updateQuestion.action" redirect="false"/>
+    </action>
+
+    <action name="loginPost" class="userController" method="loginPost" httpMethod="POST">
+        <result name="loginSuccess" view="contentAdmin.action" redirect="true"/>
+        <result name="loginError" view="/WEB-INF/jsp/login.jsp" redirect="false"/>
+    </action>
+
+    <action name="login" class="userController" method="requestLoginResource">
+        <result name="error" view="/WEB-INF/jsp/login.jsp" redirect="false"/>
+        <result name="success" view="contentAdmin.action" redirect="true"/>
+    </action>
+
+    <action name="logout" class="userController" method="logout">
+        <result name="success" view="/WEB-INF/jsp/login.jsp" redirect="false"/>
+    </action>
+
+    <action name="questionOption" class="questionController" method="updateQuestionOption" httpMethod="POST">
+        <result name="errorupdateQuestionOption" view="updateQuestionOption.action" redirect="true"/>
+        <result name="success" view="showContenAdmin.action" redirect="false"/>
+    </action>
+
+    <action name="updateQuestionOption" class="questionController" method="update">
+        <result name="questionOptionDetail" view="/WEB-INF/jsp/question_option.jsp"/>
+    </action>
+
+    <action name="viewQuestionDetail" class="questionController" method="update">
+        <result name="questionDetail" view="/WEB-INF/jsp/question_detail.jsp"/>
+    </action>
+
+</controller>

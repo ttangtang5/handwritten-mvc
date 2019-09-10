@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>Archetype Created Web Application</display-name>
+  <welcome-file-list>
+    <welcome-file>login.action</welcome-file>
+  </welcome-file-list>
+  <error-page>
+    <error-code>404</error-code>
+    <location>/404.html</location>
+  </error-page>
+  <error-page>
+    <error-code>500</error-code>
+    <location>/500.html</location>
+  </error-page>
+
+  <servlet>
+    <servlet-name>DispatcherServlet</servlet-name>
+    <servlet-class>com.tang.servlet.DispatcherServlet</servlet-class>
+    <init-param>
+      <param-name>suffix</param-name>
+      <param-value>.action</param-value>
+    </init-param>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DispatcherServlet</servlet-name>
+    <url-pattern>*.action</url-pattern>
+  </servlet-mapping>
+
+  <filter>
+    <filter-name>EncodingFilter</filter-name>
+    <filter-class>com.tang.filter.EncodingFilter</filter-class>
+    <init-param>
+      <param-name>encoding</param-name>
+      <param-value>utf-8</param-value>
+    </init-param>
+  </filter>
+  <filter>
+    <display-name>AppContextFilter</display-name>
+    <filter-name>AppContextFilter</filter-name>
+    <filter-class>com.tang.filter.AppContextFilter</filter-class>
+  </filter>
+  <filter>
+    <filter-name>LoginFilter</filter-name>
+    <filter-class>com.tang.filter.LoginFilter</filter-class>
+    <init-param>
+      <param-name>notNeedLoginPages</param-name>
+      <param-value>,login.action,loginPost.action</param-value>
+    </init-param>
+  </filter>
+
+  <filter-mapping>
+    <filter-name>EncodingFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  <filter-mapping>
+    <filter-name>AppContextFilter</filter-name>
+    <url-pattern>*.action</url-pattern>
+  </filter-mapping>
+  <filter-mapping>
+    <filter-name>LoginFilter</filter-name>
+    <url-pattern>*.action</url-pattern>
+  </filter-mapping>
+</web-app>
